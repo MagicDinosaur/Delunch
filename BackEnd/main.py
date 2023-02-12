@@ -6,6 +6,7 @@ app = Flask(__name__)
 from routes.user import user_view
 
 
+
 #register blueprints
 app.register_blueprint(user_view)
 
