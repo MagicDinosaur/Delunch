@@ -10,6 +10,7 @@ def get_user_by_email(email):
     dbm.cursor.execute("SELECT * FROM users WHERE email = %s", (email,))
     return dbm.cursor.fetchone()
 
+
 def make_adoption(id , child_id):
     dbm.cursor.execute("INSERT INTO adoption (id, child_id) VALUES (%s, %s)", (id,child_id))
     dbm.conn.commit()
