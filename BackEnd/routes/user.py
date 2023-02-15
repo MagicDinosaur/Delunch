@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify, Blueprint
 from models import user, childrens
-user_view = Blueprint('routes', __name__)
+user_view = Blueprint('user_routes', __name__)
 
 @user_view.route('/api/v1/user/login', methods=['POST'])
 def login():
