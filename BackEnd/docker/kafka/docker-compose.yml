@@ -18,3 +18,9 @@ services:
       - ALLOW_PLAINTEXT_LISTENER=yes
     depends_on:
       - zookeeper
+###3
+#function count visitor for a child visit => save to db
+#classify the review. "Review" => new review, "Reply" => reply to a review
+#validate the sponsor. >18 , income =>
+
+process events : Ex click to view a child => event => kafka queue (events)=> flink enrich data => save to db

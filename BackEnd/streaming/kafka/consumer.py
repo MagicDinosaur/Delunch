@@ -8,7 +8,6 @@ consumer = KafkaUtils(bootstrap_servers).create_consumer(topic_name)
 # Consume messages from Kafka
 print(consumer)
 for message in consumer:
-    print("hello")
-    print(message)
+    # print(message)
     print(f"Received message: {message.value}")
 sys.exit()

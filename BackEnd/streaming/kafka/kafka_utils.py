@@ -30,4 +30,9 @@ class KafkaUtils:
             enable_auto_commit=False,
             group_id='user-1',
           )
-
+    def delete_kafka_topic(self, topic_name):
+        admin_client = KafkaAdminClient(
+            bootstrap_servers=self.bootstrap_servers,
+            client_id='delete-topic-client'
+        )
+        admin_client.delete_topics([topic_name])

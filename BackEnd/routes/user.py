@@ -72,9 +72,15 @@ def make_adoption():
     return jsonify(data)
 
 
-@user_view.route('/api/v1/send_view_event', methods=['POST'])
+@user_view.route('/api/v1/send_view_event', methods=['GET'])
 def send_view_event():
-    data = request.get_json()
+    response = {
+        "status": "fail",
+        "data": {
+            "adoption_id": None
+        },
+        "message": "error message",
+    }
     # do something with data
-    return jsonify(data)
+    return jsonify(response)
 
